@@ -1,0 +1,18 @@
+﻿<Window x:Class="lab2.ListW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2"
+        mc:Ignorable="d"
+        Title="List" Height="400" Width="600">
+    <Window.Resources>
+        <local:HConverter x:Key="HConverter"/>
+        <Style x:Key="Style"/>
+    </Window.Resources>
+    <DockPanel x:Name="dockPanel" LastChildFill="True" Style="{DynamicResource Style}">
+        <Button x:Name="button" Content="Ok" Click="Button_Click" FontSize="{Binding ActualHeight, ConverterParameter=10, Converter={StaticResource HConverter}, ElementName=dockPanel, Mode=OneWay}" DockPanel.Dock="Bottom" Style="{DynamicResource Style}"/>
+        <Button Content="Удалить" DockPanel.Dock="Bottom" Click="Button_Click_1" FontSize="{Binding ActualHeight, ConverterParameter=10, Converter={StaticResource HConverter}, ElementName=dockPanel, Mode=OneWay}" Style="{DynamicResource Style}"/>
+        <ListBox x:Name="LBox" HorizontalContentAlignment="Center" MouseDoubleClick="LBox_MouseDoubleClick" FontSize="{Binding ActualHeight, Converter={StaticResource HConverter}, ElementName=button, Mode=OneWay}" Style="{DynamicResource Style}"/>
+    </DockPanel>
+</Window>
