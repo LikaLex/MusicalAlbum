@@ -32,13 +32,7 @@ namespace lab2
             }
         }
 
-        public override void InfoToConsole()
-        {
-            Console.Write("Name: " + Name + "\n\nAlbums:");
-            int i = 0;
-            foreach (Album F in AlbumsList) Console.Write("\n"+ ++i + ". " + F.Name);
-            Console.WriteLine("\n" + ++i + ". Edit");
-        }
+   
 
         public override Obj NextObj(int index)
         {

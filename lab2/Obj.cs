@@ -34,7 +34,6 @@ namespace lab2
             }
         }
 
-        public virtual void InfoToConsole() { }
         public virtual Obj NextObj(int index) {
             return null;
         }

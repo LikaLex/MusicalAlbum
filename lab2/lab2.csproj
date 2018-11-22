@@ -162,5 +162,8 @@
     <Resource Include="Images\PMM.jpg" />
     <Resource Include="Images\PTX.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

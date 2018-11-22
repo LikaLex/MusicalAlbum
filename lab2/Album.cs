@@ -31,25 +31,6 @@ namespace lab2
         }
         IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator();}
 
-        public override void InfoToConsole()
-        {
-            if (Library != null)
-            {
-                Console.Write("Album: " + Name + "\n\nGenre: " + Genre +
-                "\n\nYear: " + Year.ToString() + "\n\n1." + Library.Name + " - Library" + "\n\nTracks:");
-                int i = 1;
-                foreach (Track A in TracksList) Console.Write("\n" + ++i + ". " + A.Name);
-                Console.WriteLine("\n" + ++i + ". Edit");
-            }
-            else
-            {
-                Console.Write("Album: " + Name + "\n\nGenre: " + Genre +
-                "\n\nYear: " + Year.ToString() + "\n\nTracks:");
-                int i = 0;
-                foreach (Track A in TracksList) Console.Write("\n" + ++i + ". " + A.Name);
-                Console.WriteLine("\n" + ++i + ". Edit");
-            }
-        }
 
         public override Obj NextObj(int index)
         {
